@@ -1,0 +1,24 @@
+{
+  "workflowId": "example-json-workflow",
+  "name": "Example JSON Workflow",
+  "version": "1.0",
+  "description": "An example workflow loaded from JSON",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "START",
+      "transitions": ["task1"]
+    },
+    {
+      "id": "task1",
+      "type": "TASK",
+      "name": "Simple Task",
+      "executor": "com.workflow.engine.example.SimpleTaskExecutor",
+      "transitions": ["end"]
+    },
+    {
+      "id": "end",
+      "type": "END"
+    }
+  ]
+}
